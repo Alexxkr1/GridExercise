@@ -1,0 +1,81 @@
+#Header { grid-area: header; background-color: #6cb9f8}
+#Feature1 { grid-area: feature1; background-color: #f58b00}
+#Feature2 { grid-area: feature2; background-color: #7732e6}
+#Feature3 { grid-area: feature3; background-color: #da1f19}
+#Signup { grid-area: signup; background-color: #70b4ec; }
+#Content { grid-area: content; background-color: #d7e9f8; }
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    display: grid;
+    grid-template-areas:
+    'header header header' 
+    'feature1 feature2 feature3' 
+    'signup signup signup' 
+    'content content content' 
+    ;
+    background-color: #2196F3;
+    padding: 10px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container > div {
+
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
+
+@media (max-width: 768px) {
+    .container{
+        display: grid;
+        grid-template-areas:
+        'nav nav'
+        'header header'
+        'content content'
+        'signup feature1'   
+        'feature2 feature3' 
+        ;
+        background-color: #2196F3;
+        padding: 10px;
+    }
+
+    .container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+      }
+}
+
+@media (max-width: 480px) {
+    .container{
+        display: grid;
+        grid-template-areas:
+        'nav'
+        'header'
+        'content'
+        'signup'  
+        'feature1' 
+        'feature2' 
+        'feature3' 
+        ;
+        background-color: #2196F3;
+        padding: 10px;
+    }
+
+    .container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+      }
+}
+
